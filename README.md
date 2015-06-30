@@ -1,6 +1,7 @@
 # Magento2 slideshow
 
 Magento2 Slideshow - based on liteaccordion Jquery plugin with magento2 system configuration and block code
+https://store.webkul.com/
 
 How to Install the module 
 --------------------------

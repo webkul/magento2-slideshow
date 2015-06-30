@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+		<tab id="webkul" translate="label" sortOrder="10">
+            <label>Webkul</label>
+        </tab>
+        <section id="sleekaccordian" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Sleek Accordian</label>
+            <tab>webkul</tab>
+            <resource>Webkul_Sleekaccordian::configuration</resource>
+            <group id="parameters" translate="label" type="text" delault="1" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Parameters</label>
+                <field id="rounded" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Rounded</label>
+                    <comment>e.g yes/no.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="auto_play" translate="label comment" sortOrder="2" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auto Play</label>
+                    <comment>e.g yes/no.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enumerate_slides" translate="label comment"  sortOrder="4" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enumerate Slides</label>
+                    <comment>e.g yes/no.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pause_on_hover" translate="label comment" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pause On Hover</label>
+                    <comment>e.g yes/no.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="theme" translate="label comment" sortOrder="6" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme</label>
+                    <comment>eg.can use stitch,light,dark theme.</comment>
+                    <!--source_model>Webkul\Sleekaccordian\Model\Config\Source\Sleektheme</source_model-->
+                    <!--source_model>Webkul\Sleekaccordian\Model\Config\Source</source_model-->
+                </field>
+                <field id="slide_speed" translate="label comment" sortOrder="7" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slide Speed</label>
+                    <comment>e.g 800 .</comment>
+                    <validate>validate-number required-entry</validate>
+                </field>
+                <field id="cycle_speed" translate="label comment" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cycle Speed</label>
+                    <comment>e.g 6000 .</comment>
+                    <validate>validate-number required-entry</validate>
+                </field>
+                <field id="container_width" translate="label comment" sortOrder="9" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Container Width</label>
+                    <comment>e.g 960 .</comment>
+                    <validate>validate-number required-entry</validate>
+                </field>
+                 <field id="header_width" translate="label comment" sortOrder="10" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Width</label>
+                    <comment>e.g 480.</comment>
+                    <validate>validate-number required-entry</validate>
+                </field>
+                 <field id="container_height" translate="label comment" sortOrder="11" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Container Height</label>
+                    <comment>e.g 320.</comment>
+                    <validate>validate-number required-entry</validate>
+                </field>
+                <field id="slider_image_1" translate="label" type="image" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slider Image 1</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Webkul\Sleekaccordian\Model\Saveimage</backend_model>
+                    <base_url type="media" scope_info="1">webkul/banner</base_url>
+                </field>
+                <field id="image_caption_1" translate="label comment" sortOrder="13" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Caption</label>
+                </field>
+                <field id="slide_caption_1" translate="label comment" sortOrder="14" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slide Caption</label>
+                </field>
+                <field id="slider_image_2" translate="label" type="image" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slider Image 2</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Webkul\Sleekaccordian\Model\Saveimage</backend_model>
+                    <base_url type="media" scope_info="1">webkul/banner</base_url>
+                </field>
+                <field id="image_caption_2" translate="label comment" sortOrder="16" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Caption</label>
+                </field>
+                <field id="slide_caption_2" translate="label comment" sortOrder="17" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slide Caption</label>
+                </field>
+                <field id="slider_image_3" translate="label" type="image" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slider Image 3</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Webkul\Sleekaccordian\Model\Saveimage</backend_model>
+                    <base_url type="media" scope_info="1">webkul/banner</base_url>
+                </field>
+                <field id="image_caption_3" translate="label comment" sortOrder="19" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Caption</label>
+                </field>
+                <field id="slide_caption_3" translate="label comment" sortOrder="20" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slide Caption</label>
+                </field>
+                <field id="slider_image_4" translate="label" type="image" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slider Image 4</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Webkul\Sleekaccordian\Model\Saveimage</backend_model>
+                    <base_url type="media" scope_info="1">webkul/banner</base_url>
+                </field>
+                <field id="image_caption_4" translate="label comment" sortOrder="22" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Caption</label>
+                </field>
+                <field id="slide_caption_4" translate="label comment" sortOrder="23" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slide Caption</label>
+                </field>
+                <field id="slider_image_5" translate="label" type="image" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slider Image 5</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Webkul\Sleekaccordian\Model\Saveimage</backend_model>
+                    <base_url type="media" scope_info="1">webkul/banner</base_url>
+                </field>
+                <field id="image_caption_5" translate="label comment" sortOrder="25" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Caption</label>
+                </field>
+                <field id="slide_caption_5" translate="label comment" sortOrder="26" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slide Caption</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

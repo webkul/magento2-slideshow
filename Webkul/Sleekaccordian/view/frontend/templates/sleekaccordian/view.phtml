@@ -1,0 +1,45 @@
+<?php
+	$configdata=$block->getSleekaccordianConfig();
+	$sliders=$block->getSliderImages();
+	$rand=rand(10,100);
+?>
+<link href="<?php echo $this->getViewFileUrl('Webkul_Sleekaccordian::css/liteaccordion.css') ?>" type="text/css" rel="stylesheet" />
+<div style="display:none;" id="slider_<?php echo $rand; ?>">
+ <ol>
+ <?php foreach($sliders as $slider){ ?>
+		<li>
+			<h2><span><?php echo $slider['slide_caption']; ?></span></h2>
+			<div>
+				<figure>
+					<img src="<?php echo $slider['slider_image']; ?>" alt="No Image"/>
+					<figcaption><?php echo $slider['image_caption'];?></figcaption>
+				</figure>
+			</div>
+		</li>
+<?php } ?>
+ </ol></div>
+<script>
+	require(['jquery','<?php echo $this->getViewFileUrl('Webkul_Sleekaccordian::js/liteaccordion.jquery.js')?>'],function($wk_jq){
+		var boolarry={'1':true,'0':false};
+		$config=JSON.parse('<?php echo json_encode($configdata) ?>');
+		$wk_jq('#slider_<?php echo $rand?>').liteAccordion({
+			onTriggerSlide : function() {
+				this.find('figcaption').fadeOut();
+			},
+			onSlideAnimComplete : function() {    
+				this.find('figcaption').fadeIn();
+			},   
+			autoPlay :$config['auto_play'],
+			containerWidth :parseFloat($config['container_width']),
+			containerHeight :parseFloat($config['container_height']),
+			headerWidth :parseFloat($config['header_width']),
+			pauseOnHover :boolarry[$config['pause_on_hover']],
+			cycleSpeed :$config['cycle_speed'] ,
+			theme : $config['theme'],
+			rounded : boolarry[$config['rounded']],
+			enumerateSlides :boolarry[$config['enumerate_slides']],
+		}).find('figcaption:first').show();
+		$wk_jq('#slider_<?php echo $rand?>').show();
+	});
+</script>
+

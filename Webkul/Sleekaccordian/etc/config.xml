@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <sleekaccordian>
+            <parameters>
+                <rounded>0</rounded>
+                <auto_play>1</auto_play>
+                <easing>1</easing>
+                <enumerate_slides>1</enumerate_slides>
+                <pause_on_hover>1</pause_on_hover>
+                <theme>stitch</theme>
+                <image_caption>1</image_caption>
+                <slide_caption>1</slide_caption>
+                <slide_speed>800</slide_speed>
+                <cycle_speed>6000</cycle_speed>
+                <container_width>960</container_width>
+                <header_width>48</header_width>
+                <container_height>320</container_height>
+                <image_caption_1>Image Caption</image_caption_1>
+                <slide_caption_1>Slide Caption</slide_caption_1>
+                <image_caption_2>Image Caption</image_caption_2>
+                <slide_caption_2>Slide Caption</slide_caption_2>
+                <image_caption_3>Image Caption</image_caption_3>
+                <slide_caption_3>Slide Caption</slide_caption_3>
+                <image_caption_4>Image Caption</image_caption_4>
+                <slide_caption_4>Slide Caption</slide_caption_4>
+                <image_caption_5>Image Caption</image_caption_5>
+                <slide_caption_5>Slide Caption</slide_caption_5>
+            </parameters>
+        </sleekaccordian>
+    </default>
+</config>
